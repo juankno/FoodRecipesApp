@@ -175,7 +175,13 @@ const Home = ({ navigation }: Props) => {
                     keyExtractor={(item) => item.id.toString()}
                     renderItem={({ item, index }) => {
                         return (
-                            <TrendingCard recipeItem={item} key={index} />
+                            <TrendingCard
+                                recipeItem={item}
+                                customStyle={{
+                                    marginLeft: index === 0 ? SIZES.padding : 0,
+                                }}
+                                onPress={() => navigation.navigate('Recipe', { recipe: item })}
+                            />
                         );
                     }}
                 />
