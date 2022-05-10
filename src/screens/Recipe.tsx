@@ -1,7 +1,17 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParams } from '../navigator/StackNavigator';
 
-const Recipe = () => {
+interface Props extends StackScreenProps<RootStackParams, 'Recipe'> { }
+
+
+const Recipe = ({ route, navigation }: Props) => {
+
+    const recipe = route.params;
+
+    console.log(JSON.stringify(recipe, null, 2));
+
     return (
         <View
             style={{

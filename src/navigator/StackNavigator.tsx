@@ -7,7 +7,7 @@ import Recipe from '../screens/Recipe';
 export type RootStackParams = {
     Login: undefined,
     Home: undefined,
-    Recipe: undefined,
+    Recipe: any,
 }
 
 const Stack = createStackNavigator<RootStackParams>();
