@@ -8,6 +8,7 @@ module.exports = {
     'react-native/no-inline-styles': 0,
     '@typescript-eslint/no-unused-vars': 0,
     'react-hooks/exhaustive-deps': 0,
+    'react/self-closing-comp': 0,
   },
   overrides: [
     {
