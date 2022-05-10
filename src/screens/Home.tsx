@@ -189,6 +189,32 @@ const Home = ({ navigation }: Props) => {
         );
     }
 
+    function renderCategoryHeader() {
+        return (
+            <View
+                style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    marginTop: 20,
+                    marginHorizontal: SIZES.padding,
+                }}>
+
+                {/* Section Title */}
+                <Text style={{ flex: 1, ...FONTS.h2 }}>
+                    Categories
+                </Text>
+
+                {/* View All */}
+                <TouchableOpacity>
+                    <Text style={{ color: COLORS.gray, ...FONTS.body4 }}>
+                        View All
+                    </Text>
+                </TouchableOpacity>
+
+            </View>
+        );
+    }
+
 
     return (
         <SafeAreaView
@@ -214,6 +240,7 @@ const Home = ({ navigation }: Props) => {
                         {/* Trending section */}
                         {renderTrendingSection()}
                         {/* Category Header */}
+                        {renderCategoryHeader()}
                     </View>
                 }
                 renderItem={({ item }: any) => {
