@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import Tabs from './TabNavigator';
+import BottomTab from './BottomTabNavigator';
 import Login from '../screens/Login';
 import Recipe from '../screens/Recipe';
 
@@ -26,7 +26,7 @@ export const StackNavigator = () => {
             />
             <Stack.Screen
                 name="Home"
-                component={Tabs}
+                component={BottomTab}
             />
             <Stack.Screen
                 name="Recipe"
