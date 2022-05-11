@@ -8,9 +8,9 @@ export interface Recipe {
     serving: number;
     isBookmark: boolean;
     category: string;
-    author: Author;
-    ingredients: Ingredient[];
-    viewers: Viewer[];
+    author?: Author;
+    ingredients?: Ingredient[];
+    viewers?: Viewer[];
 }
 
 export interface Author {
