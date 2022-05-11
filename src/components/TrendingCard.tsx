@@ -112,27 +112,31 @@ export const TrendingCard = ({ recipeItem, customStyle, onPress }: Props) => {
             />
 
             {/* Category */}
-            <View
-                style={{
-                    position: 'absolute',
-                    top: 20,
-                    left: 15,
-                    paddingHorizontal: SIZES.radius,
-                    paddingVertical: 5,
-                    backgroundColor: COLORS.transparentGray,
-                    borderRadius: SIZES.radius,
-                }}
-            >
-                <Text
+            {
+                recipeItem.category &&
+                <View
                     style={{
-                        color: COLORS.white,
-                        ...FONTS.h4,
+                        position: 'absolute',
+                        top: 20,
+                        left: 15,
+                        paddingHorizontal: SIZES.radius,
+                        paddingVertical: 5,
+                        backgroundColor: COLORS.transparentGray,
+                        borderRadius: SIZES.radius,
                     }}
                 >
-                    {recipeItem.category}
-                </Text>
+                    <Text
+                        style={{
+                            color: COLORS.white,
+                            ...FONTS.h4,
+                        }}
+                    >
+                        {recipeItem.category}
+                    </Text>
 
-            </View>
+                </View>
+            }
+
 
             {/* Card info */}
             <RecipeCardInfo
