@@ -1,16 +1,16 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import BottomTab from './BottomTabNavigator';
-import Login from '../screens/Login';
-import Recipe from '../screens/Recipe';
+import LoginScreen from '../screens/LoginScreen';
+import RecipeScreen from '../screens/RecipeScreen';
 
 export type RootStackParams = {
-    Login: undefined,
-    Home: undefined,
-    Recipe: any,
-    Search: undefined,
-    Bookmark: undefined,
-    Settings: undefined,
+    LoginScreen: undefined,
+    HomeScreen: undefined,
+    RecipeScreen: any,
+    SearchScreen: undefined,
+    BookmarkScreen: undefined,
+    SettingsScreen: undefined,
 }
 
 const Stack = createStackNavigator<RootStackParams>();
@@ -21,19 +21,19 @@ export const StackNavigator = () => {
             screenOptions={{
                 headerShown: false,
             }}
-            initialRouteName={'Login'}
+            initialRouteName={'LoginScreen'}
         >
             <Stack.Screen
-                name="Login"
-                component={Login}
+                name="LoginScreen"
+                component={LoginScreen}
             />
             <Stack.Screen
-                name="Home"
+                name="HomeScreen"
                 component={BottomTab}
             />
             <Stack.Screen
-                name="Recipe"
-                component={Recipe}
+                name="RecipeScreen"
+                component={RecipeScreen}
             />
         </Stack.Navigator>
     );

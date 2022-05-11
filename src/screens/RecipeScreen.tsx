@@ -3,10 +3,10 @@ import { View, Text } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RootStackParams } from '../navigator/StackNavigator';
 
-interface Props extends StackScreenProps<RootStackParams, 'Recipe'> { }
+interface Props extends StackScreenProps<RootStackParams, 'RecipeScreen'> { }
 
 
-const Recipe = ({ route, navigation }: Props) => {
+const RecipeScreen = ({ route, navigation }: Props) => {
 
     const recipe = route.params;
 
@@ -25,4 +25,4 @@ const Recipe = ({ route, navigation }: Props) => {
     );
 };
 
-export default Recipe;
+export default RecipeScreen;

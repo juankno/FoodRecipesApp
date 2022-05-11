@@ -1,7 +1,7 @@
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
-import { View, Text, TouchableOpacity, ImageBackground, StatusBar } from 'react-native';
-import { StackScreenProps, StackNavigationProp } from '@react-navigation/stack';
+import { View, Text, ImageBackground, StatusBar } from 'react-native';
+import { StackScreenProps } from '@react-navigation/stack';
 import { RootStackParams } from '../navigator/StackNavigator';
 import { COLORS, images, SIZES, FONTS } from '../constants';
 import { CustomButtom } from '../components/CustomButtom';
@@ -54,7 +54,7 @@ const renderHeader = () => {
 };
 
 
-const Login = ({ navigation }: Props) => {
+const LoginScreen = ({ navigation }: Props) => {
     return (
         <View
             style={{
@@ -102,7 +102,7 @@ const Login = ({ navigation }: Props) => {
                             borderRadius: 20,
                         }}
                         colors={[COLORS.darkGreen, COLORS.lime]}
-                        onPress={() => navigation.replace('Home')}
+                        onPress={() => navigation.replace('HomeScreen')}
                     />
 
                     {/* sign up */}
@@ -116,7 +116,7 @@ const Login = ({ navigation }: Props) => {
                             borderWidth: 1,
                         }}
                         colors={[]}
-                        onPress={() => navigation.replace('Home')}
+                        onPress={() => navigation.replace('HomeScreen')}
                     />
                 </View>
             </View>
@@ -124,4 +124,4 @@ const Login = ({ navigation }: Props) => {
     );
 };
 
-export default Login;
+export default LoginScreen;

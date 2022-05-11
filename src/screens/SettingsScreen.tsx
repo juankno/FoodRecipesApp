@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-export const BookMarks = () => {
+export const SettingsScreen = () => {
     return (
         <View>
             <Text>
-                BookMarks Screen
+                Settings Screen
             </Text>
         </View>
     );

@@ -6,9 +6,9 @@ import { FONTS, COLORS, SIZES, icons, images, dummyData } from '../constants';
 import { CategoryCard } from '../components/CategoryCard';
 import { TrendingCard } from '../components/TrendingCard';
 
-interface Props extends StackScreenProps<RootStackParams, 'Home'> { }
+interface Props extends StackScreenProps<RootStackParams, 'HomeScreen'> { }
 
-const Home = ({ navigation }: Props) => {
+export const HomeScreen = ({ navigation }: Props) => {
 
     function renderHeader() {
         return (
@@ -180,7 +180,7 @@ const Home = ({ navigation }: Props) => {
                                 customStyle={{
                                     marginLeft: index === 0 ? SIZES.padding : 0,
                                 }}
-                                onPress={() => navigation.navigate('Recipe', { recipe: item })}
+                                onPress={() => navigation.navigate('RecipeScreen', { recipe: item })}
                             />
                         );
                     }}
@@ -250,7 +250,7 @@ const Home = ({ navigation }: Props) => {
                                 marginHorizontal: SIZES.padding,
                             }}
                             categoryItem={item}
-                            onPress={() => navigation.navigate('Recipe', { recipe: item })}
+                            onPress={() => navigation.navigate('RecipeScreen', { recipe: item })}
                         />
                     );
                 }}
@@ -268,4 +268,3 @@ const Home = ({ navigation }: Props) => {
     );
 };
 
-export default Home;
