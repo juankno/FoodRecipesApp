@@ -2,9 +2,10 @@ import React from 'react';
 import { TouchableOpacity, View, Text, Image, StyleSheet, Platform } from 'react-native';
 import { BlurView } from '@react-native-community/blur';
 import { FONTS, SIZES, COLORS, icons } from '../constants';
+import { Recipe } from '../interfaces/Recipe';
 
 interface Props {
-    recipeItem: any;
+    recipeItem: Recipe;
     customStyle?: any;
     onPress?: () => void;
 }
