@@ -3,11 +3,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import BottomTab from './BottomTabNavigator';
 import LoginScreen from '../screens/LoginScreen';
 import RecipeScreen from '../screens/RecipeScreen';
+import { Recipe } from '../interfaces/Recipe';
 
 export type RootStackParams = {
     LoginScreen: undefined,
     HomeScreen: undefined,
-    RecipeScreen: any,
+    RecipeScreen: Recipe,
     SearchScreen: undefined,
     BookmarkScreen: undefined,
     SettingsScreen: undefined,

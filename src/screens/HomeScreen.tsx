@@ -180,7 +180,7 @@ export const HomeScreen = ({ navigation }: Props) => {
                                 customStyle={{
                                     marginLeft: index === 0 ? SIZES.padding : 0,
                                 }}
-                                onPress={() => navigation.navigate('RecipeScreen', { recipe: item })}
+                                onPress={() => navigation.navigate('RecipeScreen', item)}
                             />
                         );
                     }}
@@ -250,7 +250,7 @@ export const HomeScreen = ({ navigation }: Props) => {
                                 marginHorizontal: SIZES.padding,
                             }}
                             categoryItem={item}
-                            onPress={() => navigation.navigate('RecipeScreen', { recipe: item })}
+                            onPress={() => navigation.navigate('RecipeScreen', item)}
                         />
                     );
                 }}
