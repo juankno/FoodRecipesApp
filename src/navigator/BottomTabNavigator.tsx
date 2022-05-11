@@ -3,9 +3,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home';
 import { COLORS, icons } from '../constants';
 import { TabIcon } from '../components/TabIcon';
+import { Search } from '../screens/Search';
+import { BookMarks } from '../screens/BookMarks';
+import { Settings } from '../screens/Settings';
+import { RootStackParams } from './StackNavigator';
 
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<RootStackParams>();
 
 const Tabs = () => {
     return (
@@ -34,21 +38,21 @@ const Tabs = () => {
             />
             <Tab.Screen
                 name="Search"
-                component={Home}
+                component={Search}
                 options={{
                     tabBarIcon: ({ focused }) => <TabIcon focused={focused} icon={icons.search} />,
                 }}
             />
             <Tab.Screen
                 name="Bookmark"
-                component={Home}
+                component={BookMarks}
                 options={{
                     tabBarIcon: ({ focused }) => <TabIcon focused={focused} icon={icons.bookmark} />,
                 }}
             />
             <Tab.Screen
                 name="Settings"
-                component={Home}
+                component={Settings}
                 options={{
                     tabBarIcon: ({ focused }) => <TabIcon focused={focused} icon={icons.settings} />,
                 }}

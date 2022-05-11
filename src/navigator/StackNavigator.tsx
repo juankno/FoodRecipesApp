@@ -8,6 +8,9 @@ export type RootStackParams = {
     Login: undefined,
     Home: undefined,
     Recipe: any,
+    Search: undefined,
+    Bookmark: undefined,
+    Settings: undefined,
 }
 
 const Stack = createStackNavigator<RootStackParams>();
