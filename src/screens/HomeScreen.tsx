@@ -85,6 +85,7 @@ export const HomeScreen = ({ navigation }: Props) => {
 
                 <TextInput
                     style={{
+                        flex: 1,
                         marginLeft: SIZES.radius,
                         ...FONTS.body3,
                     }}
@@ -139,7 +140,7 @@ export const HomeScreen = ({ navigation }: Props) => {
                         style={{
                             marginTop: 10,
                         }}
-                        onPress={() => console.log('See recipes')}
+                        onPress={() => navigation.navigate('BookmarkScreen')}
                     >
 
                         <Text style={{
